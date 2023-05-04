@@ -1,0 +1,36 @@
+.titulo--catalogo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0em;
+}
+
+@media screen and (max-width:480px) {
+    .todos--catalogo {
+        padding: 1em 1.7em;
+    }    
+    
+    .titulo--catalogo{
+        flex-direction: column;
+        font-size: 22px;
+        gap:1em;
+        font-weight: 700;
+    }
+
+    .titulo--catalogo .btn {
+        width: 50%;
+    }
+    
+    .secao--produtos {
+        justify-content: space-between;
+    }
+
+    .card--produto{
+        width: auto;
+    }
+
+    .img--produto{
+        width: 10em;
+    }
+}
