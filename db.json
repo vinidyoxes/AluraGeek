@@ -37,7 +37,14 @@
       "preco": "899",
       "imageURL": "https://http2.mlstatic.com/D_NQ_NP_749276-MLA32731207914_112019-O.webp",
       "categoria": "consoles",
-      "descricao": "undefined"
+      "descricao": "XBOX 360 novo"
+    },
+    {
+      "name": "Nintendo Switch",
+      "preco": "2840",
+      "imageURL": "https://http2.mlstatic.com/D_NQ_NP_923193-MLA52129068557_102022-O.webp",
+      "categoria": "consoles",
+      "id": 10
     }
   ],
   "users": [

@@ -2,7 +2,8 @@ import { produtoServices } from "../services/produtoServices.js";
 
 let url = new URL(window.location)
 const id = url.searchParams.get('id')
-console.log(id)
+const edita = url.searchParams.get('edita')
+console.log(id,edita)
 
 const sectionProduto = (nome,preco,categoria,imageURL,descricao)=>{
         const card = document.querySelector('[data-produto]')

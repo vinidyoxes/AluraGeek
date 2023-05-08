@@ -1,13 +1,13 @@
 import { produtoServices} from "../services/produtoServices.js"
 
-
+let edita = true
 const cardProduto = (name, id, imageURL, preco) => {
     const card = document.querySelector('[data-todos-produtos]')
     const li = document.createElement('li').classList.add('card--produto')
     const conteudo = ` 
     <li class= "card--produto" data-id-produto=${id}>
     <div class="opcoes" data-opcoes>
-    <a href="./novoProduto.html?id=${id}"><img class="botao-edita" src="/assets/img/icon-edita.png" alt="">
+    <a href="./editaProduto.html?id=${id}&?edita"=${edita}"><img class="botao-edita" src="/assets/img/icon-edita.png" alt="">
         <img class="botao-deleta" src="/assets/img/icon-deleta.png" alt="">
    </div>
     <img src="${imageURL}" class="img--produto" alt="">

@@ -2,7 +2,7 @@
 
 const users = ()=>{
        
-      return fetch('http://localhost:3000/users')
+      return fetch('https://my-json-server.typicode.com/vinidyoxes/AluraGeek/users')
       .then(response => {
         return response.json();
       })
