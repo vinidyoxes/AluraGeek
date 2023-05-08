@@ -11,7 +11,7 @@ const cardProduto = (name,id,imageURL,preco) => {
     <img src="${imageURL}" class="img--produto" alt="">
     <h3 class="titulo--produto">${name}</h3>
     <p class="descricao--produto">${preco}</p>
-    <button class="verProduto">Ver Produto</button>
+    <a href ="./paginaProduto.html?id=${id}""><button class="verProduto">Ver Produto</button></a>
     </li>
     `
    
@@ -23,7 +23,7 @@ const cardProduto = (name,id,imageURL,preco) => {
     produtoServices.listaProdutos()
     .then(data => {
         data.forEach(produto => {
-        mostraProdutos.cardProduto(produto.name,produto.id,produto.imageURL,produto.preco)
+        cardProduto(produto.name,produto.id,produto.imageURL,produto.preco)
         })
     })
         

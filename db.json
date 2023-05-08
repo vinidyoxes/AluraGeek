@@ -8,44 +8,53 @@
       "imageURL": "https://a-static.mlcdn.com.br/1500x1500/boneco-star-wars-darth-vader-hasbro/lojaslebiscuit/2147301110/576895048f5f2290f2a02732808a20f0.jpeg"
     },
     {
+      "id": 2,
       "name": "xbox one",
       "preco": "2000.00",
-      "id": 2,
-      "categoria": "console",
-      "imageURL": "https://http2.mlstatic.com/D_NQ_NP_827517-MLA40655732582_022020-O.webp"
+      "imageURL": "https://http2.mlstatic.com/D_NQ_NP_827517-MLA40655732582_022020-O.webp",
+      "categoria": "consoles",
+      "descricao": "console top"
     },
     {
-      "name": "xbox one",
-      "preco": "2000.00",
-      "id": 2,
-      "categoria": "console",
-      "imageURL": "https://http2.mlstatic.com/D_NQ_NP_827517-MLA40655732582_022020-O.webp"
-    },
-    {
-      "name": "Boneco Baby Yoda",
+      "id": 4,
+      "name": "Boneco Baby Yoda teste",
       "preco": "750",
       "imageURL": "https://m.media-amazon.com/images/I/81qdH1ZPgML._AC_SX522_.jpg",
-      "id": 4
+      "categoria": "star wars",
+      "descricao": "boneco baby yoda topeee"
     },
     {
+      "id": 5,
       "name": "Playstation 2",
-      "preco": "599,00",
+      "preco": "600",
       "imageURL": "https://http2.mlstatic.com/D_NQ_NP_890428-MLB52152000720_102022-O.webp",
-      "id": 5
+      "categoria": "consoles",
+      "descricao": "undefined"
     },
     {
+      "id": 9,
       "name": "Xbox 360",
-      "preco": "999,99",
+      "preco": "899",
       "imageURL": "https://http2.mlstatic.com/D_NQ_NP_749276-MLA32731207914_112019-O.webp",
       "categoria": "consoles",
-      "id": 9
+      "descricao": "undefined"
     }
   ],
   "users": [
     {
-      "user": "admin",
-      "login": "adminPC",
-      "pass": "admin"
+      "user": "admin@admin",
+      "pass": "admin",
+      "id": 1
+    },
+    {
+      "user": "admin@admin",
+      "pass": "admin",
+      "id": 2
+    },
+    {
+      "user": "admin@admin",
+      "pass": "dad",
+      "id": 3
     }
   ]
 }

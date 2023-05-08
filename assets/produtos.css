@@ -6,6 +6,21 @@
     margin: 0 0em;
 }
 
+.opcoes{
+    position:relative;
+    display: flex;
+    top: 15%;
+    left: 70%;
+    gap: 0.6em;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.164);
+    padding: 0.2em;
+}
+
+.opcoes img:hover{
+    cursor: pointer;
+}
+
 @media screen and (max-width:480px) {
     .todos--catalogo {
         padding: 1em 1.7em;
@@ -30,6 +45,7 @@
         width: auto;
     }
 
+    
     .img--produto{
         width: 10em;
     }

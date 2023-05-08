@@ -1,9 +1,5 @@
  import { produtoServices } from "../services/produtoServices.js"
     
-
-    
-    debugger;
-
     const form = document.querySelector(`[data-form-novoProduto]`)
     form.onsubmit = (evento)=>{
 
@@ -14,8 +10,7 @@
         const preco = document.getElementById(`precoProduto`).value
         const descricao = document.getElementById(`descricaoProduto`).value
 
-        produtoServices.criaProdutos(nome, preco, url,categoria).then(console.log(".then do cria"))
+        produtoServices.criaProdutos(nome, preco, url,categoria).then(window.location.href = '../index.html')
         console.log(nome,preco)
     }   
-
 
