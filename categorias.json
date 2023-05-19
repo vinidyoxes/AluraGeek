@@ -1,0 +1,15 @@
+[   
+    {
+        "id": 1,
+        "categoria": "Consoles"
+
+    },
+    {
+        "id":2,
+        "categoria":"Star Wars"
+    },
+    {
+        "id":3,
+        "categoria":"Outros"
+    }
+]
