@@ -7,13 +7,14 @@
 
 const listaProdutos = ()=>{
             
-     return fetch('https://my-json-server.typicode.com/vinidyoxes/AluraGeek/produto')
+     return fetch('http://localhost:3000/produto')
      .then(response => {
          console.log(response)
           return response.json()
          
-      })
-}
+      }).catch(error=> {
+          console.log(error) })
+      }
 
 
  
@@ -22,7 +23,7 @@ const listaProdutos = ()=>{
 
 const criaProdutos = (name,preco,imageURL, categoria,descricao)=>{
 
-    return fetch('https://my-json-server.typicode.com/vinidyoxes/AluraGeek', {
+    return fetch('http://localhost:3000/produto', {
           method:"POST",
           headers:{ 'Content-type':"application/json"},
           body: JSON.stringify({ 
@@ -44,7 +45,7 @@ const criaProdutos = (name,preco,imageURL, categoria,descricao)=>{
 //DELET
 
 const removeProdutos = (id)=>{
-     return fetch(`https://my-json-server.typicode.com/vinidyoxes/AluraGeek/${id}`, {
+     return fetch(`http://localhost:3000/produto/${id}`, {
           method:"DELETE"})
      }
 
@@ -53,7 +54,7 @@ const removeProdutos = (id)=>{
           //UPDATE
      
           const editaProdutos = (id)=>{
-               return fetch(`https://my-json-server.typicode.com/vinidyoxes/AluraGeek/${id}`)
+               return fetch(`http://localhost:3000/produto/${id}`)
                .then(response => {
                     console.log(response)
                      return response.json()
@@ -63,7 +64,7 @@ const removeProdutos = (id)=>{
           }
           
           const atualizaProdutos = (id,name,preco,imageURL,categoria,descricao)=>{
-               return fetch(`https://my-json-server.typicode.com/vinidyoxes/AluraGeek/${id}`, { 
+               return fetch(`http://localhost:3000/produto/${id}`, { 
                     method:'PUT',
                     headers: {'Content-type':"application/json"},
                     body: JSON.stringify({

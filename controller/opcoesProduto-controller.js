@@ -7,8 +7,8 @@ const cardProduto = (name, id, imageURL, preco) => {
     const conteudo = ` 
     <li class= "card--produto" data-id-produto=${id}>
     <div class="opcoes" data-opcoes>
-    <a href="./editaProduto.html?id=${id}&?edita"=${edita}"><img class="botao-edita" src="/assets/img/icon-edita.png" alt="">
-        <img class="botao-deleta" src="/assets/img/icon-deleta.png" alt="">
+    <a href="./editaProduto.html?id=${id}&?edita"=${edita}"><img class="botao-edita" src="/assets/img/icon-edita.png" alt=""></a>
+    <img class="botao-deleta" src="/assets/img/icon-deleta.png" alt="">
    </div>
     <img src="${imageURL}" class="img--produto" alt="">
     <h3 class="titulo--produto">${name}</h3>
@@ -34,9 +34,11 @@ const cardProduto = (name, id, imageURL, preco) => {
            console.log(' é botao de edita')
        }else if(botaoEditar === "botao-deleta") {
            let produto =  evento.target.closest('[data-id-produto]')
+           console.log(produto)
             let id = produto.dataset.idProduto
             console.log(id)
             produtoServices.removeProdutos(id)
+           produto.remove();
           
         }
     })

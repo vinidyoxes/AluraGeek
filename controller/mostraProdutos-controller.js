@@ -1,11 +1,20 @@
+import { categoriaServices } from "../services/categorias.js";
 import { produtoServices } from "../services/produtoServices.js"
 
 
 
+const conteinerCategoria = (nameCategoria,id)=>{
+    document.querySelector('[data-todos-categorias]')
+    .insertAdjacentHTML('afterBegin',`<div class="secao--catalogo starwars">
+    <h1 class="secao--titulo" >${nameCategoria}</h1>
+    <ul class="secao--produtos" data-produto=${nameCategoria}>
+
+    </div>`)
+}
 
 
-const cardProduto = (name,id,imageURL,preco) => {
-    const card = document.querySelector('[data-produto]')
+const cardProduto = (name,id,imageURL,preco,categoria) => {
+    const card = document.querySelector(`[data-produto=${categoria}]`)
     const conteudo = ` 
     <li class= "card--produto">
     <img src="${imageURL}" class="img--produto" alt="">
@@ -18,14 +27,28 @@ const cardProduto = (name,id,imageURL,preco) => {
     card.insertAdjacentHTML("afterbegin",conteudo );
     return card
     
-}
+}   
+    categoriaServices.listaCategorias().then(data => {
+        data.map((categoriaAtual)=>{
+            console.log(categoriaAtual.categoria);
+            conteinerCategoria(categoriaAtual.categoria)
+            produtoServices.listaProdutos()
+            .then(data => {
+                data.forEach(produto => {
+                    console.log(categoriaAtual.categoria,produto.categoria)
+                if(categoriaAtual.categoria === produto.categoria){
+                    console.log('produto equivalente')
+                    cardProduto(produto.name,produto.id,produto.imageURL,produto.preco,produto.categoria)
+                } else {console.log('produto diferente')}
+                })
+            })
 
-    produtoServices.listaProdutos()
-    .then(data => {
-        data.forEach(produto => {
-        cardProduto(produto.name,produto.id,produto.imageURL,produto.preco)
+            
         })
     })
+
+
+   
         
  
 

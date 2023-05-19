@@ -10,7 +10,7 @@
         const preco = document.getElementById(`precoProduto`).value
         const descricao = document.getElementById(`descricaoProduto`).value
 
-        produtoServices.criaProdutos(nome, preco, url,categoria).then(window.location.href = '../index.html')
+        produtoServices.criaProdutos(nome, preco, url,categoria).then(window.location.href = '../produtos.html')
         console.log(nome,preco)
     }   
 

@@ -1,7 +1,7 @@
 .todos--catalogo{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     padding: 2em;
     font-family: var(--fonte);
     background-color: #F5F5F5;
